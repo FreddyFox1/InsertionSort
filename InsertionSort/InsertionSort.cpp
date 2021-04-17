@@ -35,7 +35,7 @@ void outputArray(int* _array, int _Size)
 {
 	for (int i = 1; i <= _Size; i++)
 		cout << _array[i] << "    ";
-	cout << "\n\n";
+	cout << "\n";
 }
 
 /// <summary>
@@ -70,7 +70,7 @@ void Swap(int* _array, int i, int j)
 /// <param name="_Size">Количество элементов в массиве</param>
 void InsertionSort(int* _array, int _Size)
 {
-	cout << "Шаги сортировки:" << "\n\n";
+	cout << "\nШаги сортировки:" << "\n\n";
 	int x;
 	int j;
 	for (int i = 1; i <= _Size; i++)
@@ -83,7 +83,7 @@ void InsertionSort(int* _array, int _Size)
 			j -= 1;
 		}
 		_array[j] = x;
-		
+
 		if (i > 1) {
 			cout << "    i = " << i - 1 << "\t";
 			outputArray(_array, _Size);
@@ -106,12 +106,12 @@ int main()
 	cout << "Введите числа массива: \n";
 	inputArray(array, size);
 
-	cout << "Исходный массив \n";
+	cout << "\nИсходный массив \n";
 	outputArray(array, size);
 
 	InsertionSort(array, size);
 
-	cout << "Отсортированный массив \n";
+	cout << "\nОтсортированный массив: \n";
 	outputArray(array, size);
 }
 
